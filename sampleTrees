@@ -1,0 +1,7 @@
+saf <- stack(system.file("external/rlogo.grd", package="raster")) 
+plotRGB( saf )
+e <- drawExtent()
+    
+vals <- extract( saf , e , nl = nlayers( saf ) )
+vals <- colMeans( vals )
+vals
